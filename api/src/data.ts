@@ -11,7 +11,7 @@ export const AUTH_LIST: User[] = [
     password: 'Q!@wertyuiop123',
     name: 'John Doe',
   },
-] as const;
+];
 
 /**
  * List of inspirational quotes. Not verified at all, they were produced by ChatGPT.

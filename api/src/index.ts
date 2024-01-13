@@ -73,10 +73,10 @@ app.get('/api/dashboard', isLoggedIn, function (req, res) {
     const index = getRandomNumber(0, QUOTES.length - 1);
     const quote = QUOTES[index];
 
-    return {
+    return res.status(200).json({
       success: true,
       quote,
-    };
+    });
   } catch (error) {
     console.error('Internal error occurred in the dashboard path', error);
     return res.status(500).json({ success: false, message: 'Internal error' });

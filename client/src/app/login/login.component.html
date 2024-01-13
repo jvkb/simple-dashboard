@@ -1,0 +1,29 @@
+<div class="login-page">
+  <form
+    class="login-page__form"
+    [formGroup]="loginForm"
+    (ngSubmit)="onSubmit()"
+  >
+    <h1 class="login-page__title">Login Form</h1>
+    <label for="email">E-mail</label>
+    <input
+      id="email"
+      class="login-page__input"
+      type="email"
+      required
+      formControlName="email"
+    />
+    <label for="password">Password</label>
+    <input
+      id="password"
+      class="login-page__input"
+      type="password"
+      required
+      formControlName="password"
+    />
+    <input class="login-page__button" type="submit" value="Login" />
+    <span class="login-page__error" *ngIf="loginError">
+      Invalid credentials!
+    </span>
+  </form>
+</div>

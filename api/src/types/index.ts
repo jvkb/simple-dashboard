@@ -7,13 +7,13 @@ export type User = {
   name: string;
 };
 
-export type ExtendedRequest = {
-  isLoggedIn: boolean;
-  user: User;
-};
-
 export type LoginDTO = {
   email: string;
   password: string;
 };
+
+export interface ExtendedRequest extends Request {
+  user: User;
+  isLoggedIn: boolean;
+}
 
